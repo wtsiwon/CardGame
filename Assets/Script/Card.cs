@@ -20,6 +20,22 @@ public class Card : MonoBehaviour
 {
     public PRS originPRS;
 
+    [Range(0f, 1f)]
+    public float percent;
+
+    public Vector3 startPos;
+    public Vector3 endPos;
+
+    public Vector3 tempStartPos;
+    public Vector3 tempEndPos;
+    private void Update()
+    {
+
+        //transform.position = Vector3.Slerp(startPos, endPos, percent);
+        
+    }
+
+
     public void MoveTransform(PRS prs, bool useLerp, float lerpTime = 0)
     {
         if (useLerp == false)
